@@ -13,15 +13,15 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-lg">
-          <%= link_to 'Private Events', root_path, class: 'navbar-brand fw-bold border border-3 px-3' %>
+          <%= link_to 'Private Events', root_path, class: 'navbar-brand fw-bold rounded-pill border border-3 px-3' %>
           <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavLinks" aria-controls="navbarNavLinks" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavLinks">
             <div class="navbar-nav ml-auto">
-              <a class="nav-link border-right active" aria-current="page" href="#">Events</a>
+              <%= link_to 'New Event', new_event_path, class: 'nav-link border-right fw-bold' %>
               <% if user_signed_in? %>
-                <p class="nav-link text-muted fw-bold mb-0">Hello, <%= current_user.name %></p>
+                <p class="nav-link text-primary fw-bold mb-0">Hello, <%= current_user.name %></p>
                 <%= link_to 'Logout', session_path(current_user.id), method: :delete, class: 'nav-link text-danger' %>
               <% else %>
                 <%= link_to 'Login', new_session_path, class: 'nav-link' %>
