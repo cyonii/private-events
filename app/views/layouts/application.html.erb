@@ -21,7 +21,9 @@
             <div class="navbar-nav ml-auto">
               <%= link_to 'New Event', new_event_path, class: 'nav-link border-right fw-bold' %>
               <% if user_signed_in? %>
-                <p class="nav-link text-primary fw-bold mb-0">Hello, <%= current_user.name %></p>
+                <%= link_to user_path(current_user), class: 'nav-link fw-bold' do %>
+                  Hello, <%= current_user.name %>
+                <% end %>
                 <%= link_to 'Logout', session_path(current_user.id), method: :delete, class: 'nav-link text-danger' %>
               <% else %>
                 <%= link_to 'Login', new_session_path, class: 'nav-link' %>
