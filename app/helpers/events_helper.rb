@@ -17,6 +17,6 @@ module EventsHelper
   def join_button(event)
     return 'Attending' if event.attendees.include?(current_user)
 
-    render 'self_join'
+    render 'self_join' if current_user
   end
 end
