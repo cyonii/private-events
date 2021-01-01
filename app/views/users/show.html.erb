@@ -14,18 +14,8 @@
   </div>
 
   <div class="col-md-3">
-    <h6 class="fw-bold fs-5">Invited Events</h6>
-    <ul class="list-group list-group-flush">
-      <% for event in @user.invites %>
-      <li class="list-group-item pl-0">
-        <p class="lh-1 mb-0">
-          <%= link_to event_path(event), class: 'text-decoration-none' do %>
-            <%= event.name %>
-          <% end %>
-        </p>
-        <span class="text-muted fs-13 fw-light fst-italic"><%= event.date %></span>
-      </li>
-      <% end %>
-    </ul>
+    <h5 class="fw-bold">Invitations</h5>
+
+    <%= render 'invitations' %>
   </div>
 </div>
