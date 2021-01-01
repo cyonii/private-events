@@ -13,11 +13,11 @@
   user.save
 end
 
-10.times do
+8.times do
   event = Event.new
   event.creator = User.all.sample
   event.name = Faker::Lorem.sentence(word_count: [5, 6, 7, 8].sample) # Faker::Book.name
-  event.date = rand(Date.today...Date.today + 2.years)
+  event.date = rand(Date.today - 2.years...Date.today + 2.years)
   event.location = Faker::Address.full_address
   event.description = Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false)
   event.save
