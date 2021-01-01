@@ -1,5 +1,5 @@
 <div class="row justify-content-center mt-5">
-  <div class="col-md-8 col-lg-6 mb-5">
+  <div class="col-md-8 col-lg-6 mb-5 mb-md-0">
     <div class="card border-3">
       <div class="card-body">
         <h5 class="card-title">Date: <%= @event.name %></h5>
@@ -29,16 +29,25 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-2 fw-bold text-success">
+      <%= join_button(@event) %>
+    </div>
   </div>
 
   <div class="col-md-4 col-lg-3">
     <h6 class="fs-5 fw-bold">Attendees</h6>
+
+    <%= render 'invite_form' %>
+
     <ul class="list-group list-group-flush">
       <% for attendee in @event.attendees %>
       <li class="list-group-item pl-0">
         <%= link_to user_path(attendee), class: 'text-decoration-none' do %>
           <%= attendee.name %>
         <% end %>
+
+        <%= cancel_button(attendee) %>
       </li>
       <% end %>
     </ul>

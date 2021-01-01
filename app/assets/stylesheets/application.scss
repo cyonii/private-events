@@ -47,3 +47,9 @@
 .fs-13 {
   font-size: 13px !important;
 }
+
+@include media-breakpoint-up('xxl') {
+  [class^='container'] {
+    max-width: 1140px;
+  }
+}
