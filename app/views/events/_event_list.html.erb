@@ -1,0 +1,10 @@
+<ul class="list-group list-group-flush">
+  <% for event in events  %>
+  <li class="list-group-item pl-0">
+    <p class="lh-1 mb-0">
+      <%= link_to event.name, event_path(event), class: 'text-decoration-none' %>
+    </p>
+    <span class="text-muted fs-13 fw-light fst-italic"><%= event.date %></span>
+  </li>
+  <% end %>
+</ul>

@@ -1,37 +1,7 @@
 <h6 class="text-muted mb-0">Upcoming</h6>
-<% if @user.invites.upcoming.count > 0 %>
-<ul class="list-group list-group-flush">
-  <% for event in @user.invites.upcoming %>
-  <li class="list-group-item pl-0">
-    <p class="lh-1 mb-0">
-      <%= link_to event_path(event), class: 'text-decoration-none' do %>
-        <%= event.name %>
-      <% end %>
-    </p>
-    <span class="text-muted fs-13 fw-light fst-italic"><%= event.date %></span>
-  </li>
-  <% end %>
-</ul>
-<% else %>
-<p class="text-muted fst-italic fw-light">No upcoming events</p>
-<% end %>
+<%= event_list(@user.invites.upcoming) %>
 
 <hr class="pt-1">
 
 <h6 class="text-muted mb-0">Past</h6>
-<% if @user.invites.past.count > 0 %>
-<ul class="list-group list-group-flush">
-  <% for event in @user.invites.past %>
-  <li class="list-group-item pl-0">
-    <p class="lh-1 mb-0">
-      <%= link_to event_path(event), class: 'text-decoration-none' do %>
-        <%= event.name %>
-      <% end %>
-    </p>
-    <span class="text-muted fs-13 fw-light fst-italic"><%= event.date %></span>
-  </li>
-  <% end %>
-</ul>
-<% else %>
-  <p class="text-muted fst-italic fw-light">No past events</p>
-<% end %>
+<%= event_list(@user.invites.past) %>

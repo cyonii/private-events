@@ -19,4 +19,22 @@ module ApplicationHelper
 
     nil
   end
+
+  def user_actions
+    if user_signed_in? and current_user
+      render 'layouts/logged_in_user_actions'
+    else
+      render 'layouts/logged_out_user_actions'
+    end
+  end
+
+  def event_list(events)
+    if events.count.positive?
+      render 'events/event_list', events: events
+    else
+      content_tag :small, class: 'text-muted fst-italic fw-light' do
+        'No event data'
+      end
+    end
+  end
 end

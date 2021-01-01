@@ -24,15 +24,7 @@
           <div class="collapse navbar-collapse" id="navbarNavLinks">
             <div class="navbar-nav ml-auto">
               <%= link_to 'New Event', new_event_path, class: 'nav-link border-right fw-bold' %>
-              <% if user_signed_in? %>
-                <%= link_to user_path(current_user), class: 'nav-link fw-bold' do %>
-                  Hello, <%= current_user.name %>
-                <% end %>
-                <%= link_to 'Logout', session_path(current_user.id), method: :delete, class: 'nav-link text-danger' %>
-              <% else %>
-                <%= link_to 'Login', new_session_path, class: 'nav-link' %>
-                <%= link_to 'Sign up', new_user_path, class: 'nav-link' %>
-              <% end %>
+              <%= user_actions %>
             </div>
           </div>
         </div>
