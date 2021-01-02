@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_login!, only: [:show]
   before_action :require_logout!, except: [:show]
 
   def new
@@ -18,7 +19,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @created_events = current_user.events
+    @past_events = current_user.invites.past
+    @upcoming_events = current_user.invites.upcoming
   end
 
   private
