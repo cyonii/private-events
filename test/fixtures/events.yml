@@ -1,13 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: My Birthday Party
   date: 2020-12-31 13:30:38
-  location: MyString
-  description: MyText
+  location: Lagos, Nigeria
+  description: Come party at my house
+  creator: one
 
 two:
-  name: MyString
+  name: DevCon Forever
   date: 2020-12-31 13:30:38
-  location: MyString
-  description: MyText
+  location: Remote, Internet
+  description: Hello world
+  creator: two
