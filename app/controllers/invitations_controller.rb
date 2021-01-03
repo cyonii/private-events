@@ -6,13 +6,12 @@ class InvitationsController < ApplicationController
     event = Event.find(params[:event_id])
 
     if user and event and !event.attendees.include?(user)
-      invitation = Invitation.create(user_id: user.id, event_id: event.id)
+      Invitation.create(attendee: user, event: event)
       flash[:notice] = 'Successfully added attendee'
-      redirect_to event_path(invitation.event_id)
     else
       flash[:alert] = 'Invalid email or user is already invited'
-      redirect_to event
     end
+    redirect_to event
   end
 
   def destroy
