@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
-  before_action :require_login!, only: %i[new create]
+  before_action :require_login!, except: %i[index show]
   before_action :set_event, only: %i[show destroy edit update]
-  before_action :owner?, only: %i[destroy edit]
+  before_action :owner?, only: %i[destroy edit update]
 
   def index
     @upcoming_events = Event.upcoming
