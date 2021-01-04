@@ -27,7 +27,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'bootstrap', '~> 5.0.0.alpha3'
-gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'faker'
 gem 'gravatar_image_tag', '~> 1.2'
 
@@ -36,6 +35,9 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
+  # Test gems
+  gem 'database_cleaner'
+  gem 'rspec-rails'
 end
 
 group :development do
