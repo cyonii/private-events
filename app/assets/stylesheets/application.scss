@@ -53,3 +53,15 @@
     max-width: 1140px;
   }
 }
+
+// Hover style for link
+.creator-link {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.creator-link:hover {
+  background: darken($light, 5%);
+}

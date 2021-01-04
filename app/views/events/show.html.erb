@@ -16,7 +16,7 @@
         <div class="d-flex flex-row align-items-center justify-content-between">
           <%= link_to 'Back to Events', events_path %>
           <div>
-            <%= link_to user_path(@event.creator), class: 'card-link fw-light fs-14 text-muted text-decoration-none' do %>
+            <%= link_to user_path(@event.creator), class: 'card-link creator-link fw-light fs-14 text-muted text-decoration-none' do %>
               <%= @event.creator.name %>
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-circle ml-1" viewBox="0 0 16 16">
                 <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
