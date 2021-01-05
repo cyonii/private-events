@@ -1,0 +1,13 @@
+<% if @user.errors.any? %>
+<div>
+  <small class="text-danger fw-light">
+    <i><b><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</b></i>
+  </small>
+
+  <% @user.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger py-0 fw-light mb-2">
+      <%= message %>
+    </div>
+  <% end %>
+</div>
+<% end %>

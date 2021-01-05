@@ -1,0 +1,2 @@
+<%= link_to "Hello, #{current_user.name}", user_path(current_user), class: 'nav-link fw-bold' %>
+<%= link_to 'Logout', session_path(current_user.id), method: :delete, class: 'nav-link text-danger' %>

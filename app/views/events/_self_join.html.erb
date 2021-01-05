@@ -1,0 +1,5 @@
+<%= form_with url: invitations_path do |form| %>
+  <%= form.hidden_field :email, value: current_user.email, class: 'form-control bg-light', placeholder: 'email', required: true %>
+  <%= form.hidden_field :event_id, value: @event.id %>
+  <%= form.submit 'Attend Event', class: 'btn btn-dark' %>
+<% end %>

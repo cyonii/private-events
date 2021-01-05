@@ -1,0 +1,12 @@
+<%= form_with url: invitations_path, class: 'row gx-1 mb-2' do |form| %>
+  <div class="col-8">
+    <%= form.label :email, class: 'visually-hidden' %>
+    <%= form.email_field :email, class: 'form-control bg-light', placeholder: 'email', required: true %>
+  </div>
+
+  <%= form.hidden_field :event_id, value: @event.id %>
+
+  <div class="col-4">
+    <%= form.submit 'Invite', class: 'btn btn-primary w-100' %>
+  </div>
+<% end %>

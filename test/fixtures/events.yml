@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: My Birthday Party
+  date: 2020-12-31 13:30:38
+  location: Lagos, Nigeria
+  description: Come party at my house
+  creator: one
+
+two:
+  name: DevCon Forever
+  date: 2020-12-31 13:30:38
+  location: Remote, Internet
+  description: Hello world
+  creator: two

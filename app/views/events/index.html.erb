@@ -1,0 +1,22 @@
+<h1 class="fs-5 fw-bold text-primary">Upcoming Events</h1>
+
+<div class="row">
+  <% for event in @upcoming_events %>
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+    <%= render 'event_card', :event => event %>
+  </div>
+  <% end %>
+</div>
+
+<hr class="my-5 bg-secondary">
+
+
+<h1 class="fs-5 fw-bold text-primary">Past Events</h1>
+
+<div class="row">
+  <% for event in @past_events %>
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+    <%= render 'event_card', :event => event %>
+  </div>
+  <% end %>
+</div>

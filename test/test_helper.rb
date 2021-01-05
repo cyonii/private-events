@@ -10,4 +10,12 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def login(user)
+    post session_index_url, params: { email: user.email }
+    current_user
+  end
+
+  def current_user
+    users.find(session[:user_id])
+  end
 end

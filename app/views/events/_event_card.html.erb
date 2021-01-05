@@ -1,0 +1,10 @@
+<div class="card border-3 shadow-sm h-100">
+  <div class="card-body d-flex flex-column">
+    <h6 class="card-title lh-1"><%= event.name %></h6>
+    <p class="card-subtitle text-muted fs-14 fw-light"><%= event.date %></p>
+
+    <p class="card-text fw-light fs-15 lh-1 my-3"><%= event.description[0...100] %></p>
+
+    <%= link_to 'Learn more', event, class: 'card-link mt-auto' %>
+  </div>
+</div>

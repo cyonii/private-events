@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: John Doe
+  email: johndoe@email.com
+
+two:
+  name: Karin Doe
+  email: karinDoe@email.com
+
+three:
+  name: Albert Einsten
+  email: albert@email.com

@@ -1,0 +1,30 @@
+<%= form_with(model: @event, local: true) do | form | %>
+  <div class="row">
+
+    <%= form_errors(@event) %>
+
+    <div class="col-12 mb-2">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="col-12 mb-2">
+      <%= form.label :location %>
+      <%= form.text_field :location, class: 'form-control' %>
+    </div>
+
+    <div class="col-12 mb-2">
+      <%= form.label :date %>
+      <%= form.date_select :date, class: 'form-control', type: 'datetime' %>
+    </div>
+
+    <div class="col-12 mb-2">
+      <%= form.label :description %>
+      <%= form.text_area :description, class: 'form-control', rows: 7 %>
+    </div>
+
+    <div class="col-12">
+      <%= form.submit class: 'btn btn-primary px-5' %>
+    </div>
+  </div>
+<% end %>
