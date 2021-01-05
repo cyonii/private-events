@@ -43,7 +43,7 @@
     <ul class="list-group list-group-flush">
       <% for attendee in @event.attendees %>
       <li class="list-group-item pl-0">
-        <%= attendee.name %>
+        <%= link_to attendee.name, attendee, class: 'text-decoration-none' %>
 
         <%= cancel_button(attendee) %>
       </li>
