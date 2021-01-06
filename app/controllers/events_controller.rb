@@ -58,7 +58,6 @@ class EventsController < ApplicationController
   def owner?
     return if current_user == @event.creator
 
-    flash[:alert] = 'Unauthorized request'
-    redirect_to @event
+    redirect_back(fallback_location: root_path, alert: 'Unauthorized request!')
   end
 end
