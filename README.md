@@ -63,3 +63,4 @@ Give a ⭐️ if you like this project!
 
 - GitHub: [@cyonii](https://github.com/cyonii)
 - Twitter: [@theOnuoha](https://twitter.com/theOnuoha)
+- LinkedIn: [Silas Kalu](https://www.linkedin.com/in/cyonii/)
