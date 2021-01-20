@@ -3,14 +3,10 @@ require 'rails_helper'
 RSpec.describe EventsController, type: :system do
   let(:user) { User.create(name: 'John Doe', email: 'johndoe@email.com') }
   let(:event_params) do
-    {
-      name: 'RubyCON', date: '2023-06-23', location: 'Remote',
-      description: 'For Rubyists', creator: user
-    }
+    { name: 'RubyCON', date: '2023-06-23', location: 'Remote',
+      description: 'For Rubyists', creator: user }
   end
-  let(:event) do
-    Event.new(event_params)
-  end
+  let(:event) { Event.new(event_params) }
 
   describe 'event management' do
     before :each do
